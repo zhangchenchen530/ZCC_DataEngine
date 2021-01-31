@@ -21,7 +21,7 @@ df2['总分'] = df.apply(lambda x: x.sum(),axis=1)
 #计算排名加入表中
 df2["排名"] = df2['总分'].rank(ascending=False,method='min')
 #排序
-df2=df2.sort_values(by='排名')
+df2.sort_values(by='排名',inplace=True)
 print('--------------------')
 print('-----总成绩排名-----')
 print(df2)
