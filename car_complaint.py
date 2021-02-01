@@ -40,6 +40,7 @@ df3.sort_values('count',ascending=False,inplace=True)
 # 修改列名称
 df3.columns=['车型','数量']
 # 输出前十行
+print('------------------------')
 print('车型投诉总数排名前十:')
 print(df3.head(10))
 
