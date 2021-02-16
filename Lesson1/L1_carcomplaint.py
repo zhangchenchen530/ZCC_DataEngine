@@ -27,7 +27,7 @@ df2 = df.merge(df2, left_index=True, right_index=True, how='left')
 df2.reset_index(inplace=True)
 # 由count进行从大到小排序
 df2.sort_values('count', ascending=False,inplace=True)
-# 输出前十行
+# 输出品牌投诉总数排名前十行
 print('------------------------')
 print('品牌投诉总数排名前十:')
 print(df2.head(10))
@@ -39,7 +39,7 @@ df3.reset_index(inplace=True)
 df3.sort_values('count',ascending=False,inplace=True)
 # 修改列名称
 df3.columns=['车型','数量']
-# 输出前十行
+# 输出车型投诉总数排名前十行
 print('------------------------')
 print('车型投诉总数排名前十:')
 print(df3.head(10))
@@ -52,7 +52,7 @@ df4 = df4.groupby(['brand'])['count'].agg(['mean'])
 df4.reset_index(inplace=True)
 df4.columns=['品牌','品牌平均故障数']
 df4.sort_values('品牌平均故障数',ascending=False,inplace=True)
-# 输出前十行
+# 输出品牌平均投诉总数排名前十行
 print('------------------------')
 print('品牌平均投诉总数排名前十:')
 print(df4.head(10))
