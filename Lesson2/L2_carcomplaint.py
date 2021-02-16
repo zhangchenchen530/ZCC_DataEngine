@@ -4,8 +4,7 @@ import pandas as pd
 
 def get_page_content(request_url):
     # 得到页面内容
-    headers = {
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'}
+    headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36'}
     html = requests.get(request_url, headers=headers, timeout=10)
     content = html.text
     soup = BeautifulSoup(content, 'html.parser', from_encoding='utf-8')
