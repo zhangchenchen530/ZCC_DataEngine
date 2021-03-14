@@ -27,8 +27,7 @@ def create_word_cloud(f):
 	wc = WordCloud(
 		max_words=10, #最高频10个
 		width=2000,
-		height=1200,
-    )
+		height=1200,)
 	wordcloud = wc.generate(cut_text)
 	# 写词云图片
 	wordcloud.to_file("wordcloud.jpg")
@@ -36,7 +35,6 @@ def create_word_cloud(f):
 	plt.imshow(wordcloud)
 	plt.axis("off")
 	plt.show()
-
 
 # 数据加载
 dataset = pd.read_csv('./Market_Basket_Optimisation.csv', header = None)
